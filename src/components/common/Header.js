@@ -3,6 +3,10 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const activeStyle = { color: "#F15B2A" };
+  // <nav>
+  //     <a href="/">Home</a> {" | "}
+  //     <a href="/about">About</a>
+  //  </nav>
   return (
     <nav>
       <NavLink to="/" activeStyle={activeStyle} exact>
