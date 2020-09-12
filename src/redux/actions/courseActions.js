@@ -1,4 +1,4 @@
-import actionTypes from "./actionTypes";
+import * as actionTypes from "./actionTypes";
 
 // This is action creator
 // It creates and action which is an object with a type and payload
