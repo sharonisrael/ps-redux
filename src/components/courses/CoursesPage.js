@@ -15,7 +15,7 @@ class CoursesPage extends React.Component {
     event.preventDefault();
     //debugger;
     // dispatch action
-    this.props.dispatch(courseActions.createCourse(this.state.course));
+    this.props.createCourse(this.state.course);
   };
 
   handleChange = (event) => {
@@ -45,8 +45,8 @@ class CoursesPage extends React.Component {
 }
 
 CoursesPage.propTypes = {
-  dispatch: PropTypes.func.isRequired,
   courses: PropTypes.array.isRequired,
+  createCourse: PropTypes.func.isRequired,
 };
 
 // After reducer updates store we expect this method to be called
@@ -58,11 +58,12 @@ function mapStateToProps(state) {
   };
 }
 
-//function mapDispatchToProps() {
-//}
+function mapDispatchToProps(dispatch) {
+  return {
+    createCourse: (course) => dispatch(courseActions.createCourse(course)),
+  };
+}
 
 // connect function connects components to redux. These are container components
-const connectedStateAndProps = connect(
-  mapStateToProps /*, mapDispatchToProps*/
-);
+const connectedStateAndProps = connect(mapStateToProps, mapDispatchToProps);
 export default connectedStateAndProps(CoursesPage);
