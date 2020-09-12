@@ -1,3 +1,5 @@
+import actionTypes from "../actions/actionTypes";
+
 // can be
 const initState = [];
 //const initState = {
@@ -8,7 +10,7 @@ const initState = [];
 function courseReducer(state = initState, action) {
   //debugger;
   switch (action.type) {
-    case "CREATE_COURSE": {
+    case actionTypes.CREATE_COURSE: {
       let newState = [...state, { ...action.course }];
       //let newState = {
       //  course_list: [...state, { ...action.course }],
