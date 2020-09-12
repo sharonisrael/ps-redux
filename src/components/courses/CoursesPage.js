@@ -13,6 +13,7 @@ class CoursesPage extends React.Component {
   handleSubmit = (event) => {
     // prevent submit and update page
     event.preventDefault();
+    //debugger;
     // dispatch action
     this.props.dispatch(courseActions.createCourse(this.state.course));
   };
@@ -48,7 +49,9 @@ CoursesPage.propTypes = {
   courses: PropTypes.array.isRequired,
 };
 
+// After reducer updates store we expect this method to be called
 function mapStateToProps(state) {
+  //debugger;
   // can be also course_list or courseReducer I didn't understand yet
   return {
     courses: state.courses,

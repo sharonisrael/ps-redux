@@ -6,6 +6,7 @@ const initState = [];
 
 // = initState is the default if undefined
 function courseReducer(state = initState, action) {
+  //debugger;
   switch (action.type) {
     case "CREATE_COURSE": {
       let newState = [...state, { ...action.course }];
