@@ -3,14 +3,14 @@ import initialState from "./initialState";
 
 // reducer slices the store
 // = initState is the default if undefined
-function courseReducer(state = initialState.courses, action) {
+function authorReducer(state = initialState.authors, action) {
   //debugger;
   switch (action.type) {
-    case actionTypes.CREATE_COURSE: {
+    case actionTypes.CREATE_AUTHOR: {
       // ... spread operator
-      let newState = [...state, { ...action.course }];
+      let newState = [...state, { ...action.author }];
       //let newState = {
-      //  course_list: [...state, { ...action.course }],
+      //  author_list: [...state, { ...action.author }],
       //};
       // return updated copy of state to the store. Whatever return from reducer becomes new state for this reducer
       return newState;
@@ -20,4 +20,4 @@ function courseReducer(state = initialState.courses, action) {
   }
 }
 
-export default courseReducer;
+export default authorReducer;

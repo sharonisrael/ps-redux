@@ -5,6 +5,7 @@ import AboutPage from "./about/AboutPage";
 import Header from "./common/Header";
 import PageNotFound from "./PageNotFound";
 import CoursesPage from "./courses/CoursesPage";
+import AuthorsPage from "./authors/AuthorsPage";
 
 function App() {
   // Route takes 2 props : the path which declares the URL and the component to load when path url matches
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/courses" component={CoursesPage} />
+        <Route path="/authors" component={AuthorsPage} />
         <Route component={PageNotFound} />
       </Switch>
     </div>

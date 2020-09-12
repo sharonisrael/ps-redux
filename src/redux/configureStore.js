@@ -8,6 +8,7 @@ export default function configureStore(initialState) {
   const composeEnhancers =
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
+  // reduxImmutableStateInvariant will warn us on state changes
   return createStore(
     rootReducer,
     initialState,

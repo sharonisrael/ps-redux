@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // Presentation component with presentation concern
+// map is a function which returns new array
+// iterating an array need key to keep track - set key to id to the table list
 function CoursesList(props) {
   return (
     <>
